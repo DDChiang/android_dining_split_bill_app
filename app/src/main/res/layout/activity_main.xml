@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+
+    <ScrollView xmlns:android = "http://schemas.android.com/apk/res/android"
+        xmlns:tools ="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp">
+
+        <TableLayout
+            android:id="@+id/mainTable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="0,1"
+            android:stretchColumns="0,1">
+
+            <TableRow
+                android:id="@+id/row1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Pre Tax Bill:"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="10dp" />
+
+                <Button
+                    android:id="@+id/addDinerButton"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Diner"
+                    android:isScrollContainer="false"
+                    android:layout_column="2" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/firstCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:selectAllOnFocus="true"
+                    android:text="@string/default_customer"/>
+
+                <EditText
+                    android:id="@+id/amount1of1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:selectAllOnFocus="true"
+                    android:text="@string/zero" >
+                    <requestFocus/>
+                </EditText>
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:id="@+id/addButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Order"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:background="#000"
+                    android:height="1dp"
+                    android:layout_span="3" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <EditText
+                    android:id="@+id/tipPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:text="15%"
+                    android:selectAllOnFocus="true"
+                    android:gravity="center_vertical|right"
+                    android:layout_gravity="center_vertical" />
+
+                <SeekBar
+                    android:id="@+id/tipSlider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:max="50"
+                    android:progress="15" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roundButton" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tip"
+                    android:focusable="false"
+                    android:layout_gravity="center|right" />
+
+                <TextView
+                    android:id="@+id/tipDollar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="$0.00"
+                    android:gravity="center" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+
+                <TextView
+                    android:id="@+id/textView3"
+                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:background="#000"
+                    android:height="1dp"
+                    android:layout_span="3"
+                    android:layout_marginTop="10dp"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row7"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+               >
+
+                <TextView
+                    android:id="@+id/tax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tax"
+                    android:gravity="center_vertical|right" />
+
+                <EditText
+                    android:id="@+id/taxDollar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:ems="10"
+                    android:selectAllOnFocus="true"
+                    android:text="$0.00"
+                    android:gravity="center"
+                    android:nextFocusDown="@id/amount1of1"
+                    android:nextFocusRight="@id/amount1of1"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/row8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textView4"
+                    android:background="#000"
+                    android:height="1dp"
+                    android:layout_span="3"
+                    android:layout_marginTop="10dp"
+                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/row9">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Grand Total"
+                    android:id="@+id/textView5"
+                    android:gravity="center_vertical|right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="$0.00"
+                    android:id="@+id/textGTotal"
+                    android:gravity="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/tableRow" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textView6"
+                    android:background="#000"
+                    android:height="1dp"
+                    android:layout_span="3"
+                    android:layout_marginTop="10dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/row11" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textView7"
+                    android:background="#000"
+                    android:height="1dp"
+                    android:layout_span="3"
+                    android:layout_marginTop="10dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/row12">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Split Bill"
+                    android:id="@+id/textView10" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/row13">
+
+                <TextView
+                    android:id="@+id/textSplit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Customer"
+                    android:gravity="right" />
+
+                <TextView
+                    android:id="@+id/textSplit1Dollar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="$0.00" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                >
+
+                <Button
+                    android:id="@+id/resetButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_span="3"
+                    android:text="Reset"
+                    android:textSize="24dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/fortuneTextBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_span="2"
+                    android:gravity="center"
+                    android:text="[Insert Fortune Here]" />
+
+                <Button
+                    android:id="@+id/fortuneButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Fortune :D "
+                    />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>
